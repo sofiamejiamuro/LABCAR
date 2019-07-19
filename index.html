@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LabCar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="img/taxiIcon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+</head>
+<body> 
+   
+    <header> <!--NAVBAR MOBILE FISRT-->
+        <!--AQUI IRIA EL MENU HAMBURGUESA-->
+        <figure class="logo">
+            <img src="img/logo.png" alt="LABCAR logo">
+        </figure>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Viaja</a></li>
+                <li><a href="#">Conduce</a></li>
+                <li><a href="#">Inicia Sesión</a></li> <!--modal iniciar sesión -->
+            </ul>
+        </nav>
+        
+    </header>
+
+
+    <main class="heroMobile"> <!--HERO-->
+        <figure class="heroImage">
+            <img src="img/taxi.jpg" alt="">
+        </figure>
+        <section class="heroMainMobile"></p>
+            <p>Comienza a viajar <br> con 
+            <img class="miniLogo" src="img/logo-blanco.png" alt="Laboratoria white logo">
+            <button class="btn1">Descarga el app</button> 
+        </section>     
+    </main>
+
+    <!--INFORMACION-->
+    <main  class="informationMobile">
+        <figure class="informationImage">           
+            <img src="img/celular.png" alt="">
+        </figure>
+        <section class="informationMainMobile">
+            <p class="top">La nueva app</p>  
+            <p class="bottom">Llega a tu destino aún más rápido</p>
+        </section>
+        
+    </main>
+
+    <!--CONDUCE-->
+    <main class="driveMobile"> 
+        <figure class="driveImage">
+            <img src="img/conduce.jpg" alt="drive">
+        </figure>  
+        <section class="driveMainMobile">
+            <p class="one">Conduce cuando quieras</p>
+            <p class="two">LabCar es una opción flexible para alcanzar tus metas financieras.</p>
+            <button class="btn2"> Conviértete en conductor</button>
+        </section>
+    </main>
+
+    <!--TARIFAS-->
+    <main class="ratesMobile"> 
+
+        <section class="ratesMainMobile">
+            <p class="rates">Tarifas</p>
+            <p class="check">Consulta las tarifas LabCar aquí</p>
+            
+            <form class="calculate">
+                <label  class="label1" for="">
+                    <img src="img/circulo.png" alt="circle">
+                    <input type="text" placeholder="Ingrese su punto de partida">
+                </label>    
+                <label class="label2" for="">
+                    <img src="img/flecha.png" alt="arrow">
+                    <input type="text" placeholder="Ingrese su destino">
+                </label>    
+            </form>
+
+            <button class="route">¡Trazar ruta!</button>
+        </section>
+
+       <div id="map"></div>
+        <!--HACKER EDITION CALCULAR TARIFAS Y TRAZAR RUTA-->
+    </main>
+    
+
+    <footer class="footer">
+        <figure class="whiteLogo">
+            <img src="img/logo-blanco.png" alt="Laboratoria white logo">
+        </figure>
+        <!--AQUI VAN LOS ICONOS-->
+        <ul class="footerMobile">
+            <li>Viaja</li>
+            <li>Conduce</li>
+            <li>Ciudades</li>
+            <li>Tarifas</li>
+            <li>Entregas</li>
+            <li>Cómo funciona</li>
+            <li>Paises</li>
+            <li>Seguridad</li>
+        </ul>
+        <ul class="footerDesktop">
+            <li>Oportunidades</li>
+            <li>Nuestra Historia</li>
+            <li>API de LabCar</li>
+            <li>Eventos</li>
+            <li>Desarrolladores</li>
+            <li>Servicios</li>
+            <li>Laboratoria</li>
+            <li>Coders</li>
+        </ul>
+             <p>© 2017 LabCar technologies Inc.</p>
+        <figure class="appLogos">
+            <img class="apple" src="img/app-store.png" alt="app store">
+            <img class="android" src="img/google-play.png" alt="google play">
+        </figure>
+    </footer>
+
+    <!--SCRIPT JS-->
+    <script> 
+            function initMap() {
+            var location = {lat: 19.432608, lng: -99.133209};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location
+            });
+
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyXHKyetKWsEyiwQcoauHWdKKQCPyhFNQ&callback=initMap" type="text/javascript"></script>
+</body>
+
+</html>
+
+
+
